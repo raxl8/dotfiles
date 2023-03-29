@@ -72,5 +72,10 @@
         "key": "shift+alt+left",
         "command": "cursorLineStartSelect",
         "when": "editorTextFocus"
+    },
+    {
+        "key": "ctrl+enter",
+        "command": "-github.copilot.generate",
+        "when": "editorTextFocus && github.copilot.activated"
     }
 ]
