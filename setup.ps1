@@ -1,9 +1,9 @@
 function Write-ScriptMessage {
-	param (
-		[String]$Message
-	)
+  param (
+    [String]$Message
+  )
 
-	Write-Host "[SETUP SCRIPT] $Message" -ForegroundColor Green
+  Write-Host "[SETUP SCRIPT] $Message" -ForegroundColor Green
 }
 
 Write-ScriptMessage "Installing scoop"
