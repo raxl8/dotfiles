@@ -61,7 +61,8 @@ $firefox_extensions = @(
   "https://addons.mozilla.org/firefox/downloads/file/3837108/jelly_party-1.7.3.xpi",
   "https://addons.mozilla.org/firefox/downloads/file/4085308/sponsorblock-5.3.1.xpi",
   "https://addons.mozilla.org/firefox/downloads/file/4030629/tampermonkey-4.18.1.xpi",
-  "https://addons.mozilla.org/firefox/downloads/file/4082096/1password_x_password_manager-2.8.1.xpi"
+  "https://addons.mozilla.org/firefox/downloads/file/4082096/1password_x_password_manager-2.8.1.xpi",
+  "https://addons.mozilla.org/firefox/downloads/file/3848483/youtube_nonstop-0.9.1.xpi"
 )
 foreach ($extension in $firefox_extensions) {
   Write-ScriptMessage "Installing Firefox extension $extension"
