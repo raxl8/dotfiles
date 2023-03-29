@@ -1,0 +1,8 @@
+[user]
+	name = raxl8
+	email = 32034076+raxl8@users.noreply.github.com
+	signingkey = 259A9A972AC7A0B1
+[commit]
+	gpgsign = true
+[push]
+	default = current

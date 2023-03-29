@@ -1,0 +1,58 @@
+{
+    "editor.accessibilitySupport": "off",
+    "editor.codeActionsOnSave": {
+        "source.fixAll": true,
+        "source.organizeImports": true
+    },
+    "explorer.confirmDelete": false,
+    "extensions.ignoreRecommendations": true,
+    "workbench.iconTheme": "Monokai Pro (Filter Machine) Icons",
+    "security.workspace.trust.enabled": false,
+    "terminal.integrated.fontFamily": "CaskaydiaCove NFM",
+    "window.zoomLevel": 1,
+    "[javascript]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode",
+        "editor.formatOnSave": true,
+        "editor.tabSize": 2
+    },
+    "[javascriptreact]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode",
+        "editor.formatOnSave": true,
+        "editor.tabSize": 2
+    },
+    "[python]": {
+        "editor.formatOnType": true
+    },
+    "[typescript]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode",
+        "editor.formatOnSave": true,
+        "editor.tabSize": 2
+    },
+    "[typescriptreact]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode",
+        "editor.formatOnSave": true,
+        "editor.tabSize": 2
+    },
+    "git.enableSmartCommit": true,
+    "git.confirmSync": false,
+    "git.autofetch": true,
+    "html.completion.attributeDefaultValue": "doublequotes",
+    "javascript.preferences.quoteStyle": "single",
+    "javascript.preferences.jsxAttributeCompletionStyle": "none",
+    "javascript.updateImportsOnFileMove.enabled": "always",
+    "prettier.requireConfig": true,
+    "typescript.preferences.quoteStyle": "single",
+    "typescript.preferences.jsxAttributeCompletionStyle": "none",
+    "vscord.status.idle.check": false,
+    "vscord.status.problems.enabled": false,
+    "workbench.colorTheme": "Monokai Pro (Filter Machine)",
+    "editor.cursorBlinking": "smooth",
+    "terminal.integrated.cursorBlinking": true,
+    "editor.cursorSmoothCaretAnimation": "on",
+    "git.openRepositoryInParentFolders": "never",
+    "workbench.startupEditor": "none",
+    "editor.inlineSuggest.enabled": true,
+    "[jsonc]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
+    }
+}
