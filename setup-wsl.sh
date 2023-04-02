@@ -17,8 +17,8 @@ Copy starship config to ~/.config/starship.toml
 chmod 600 $HOME/.ssh/id_rsa $HOME/.ssh/id_rsa.pub
 
 gpg --import key.pk
-echo "pinentry-program \"/mnt/c/Users/raxl8/scoop/apps/git/current/usr/bin/pinentry.exe\"" | tee -a $HOME/.gnupg/gpg-agent.conf
-gpg-connect-agent reloadagent /bye
+echo -e "pinentry-program \"/mnt/c/Users/raxl8/scoop/apps/git/current/usr/bin/pinentry.exe\"\ndefault-cache-ttl 34560000\nmax-cache-ttl 34560000" | tee -a $HOME/.gnupg/gpg-agent.conf
+gpgconf --reload gpg-agent
 
 sudo apt-get install ca-certificates curl gnupg
 sudo mkdir -m 0755 -p /etc/apt/keyrings
