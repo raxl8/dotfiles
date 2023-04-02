@@ -122,8 +122,13 @@ foreach ($appx_to_remove in $appxs_to_remove) {
 Start-Process DISM -Args "/online /disable-feature /featurename:WindowsMediaPlayer"
 
 #
-# Explorer
+# Settings
 #
+
+Write-ScriptMessage "Disabling Mouse acceleration"
+Set-RegistryValue -Path "HKCU:Control Panel\Mouse" -Name "MouseThreshold1" -Value "0" -Type "String"
+Set-RegistryValue -Path "HKCU:Control Panel\Mouse" -Name "MouseThreshold2" -Value "0" -Type "String"
+Set-RegistryValue -Path "HKCU:Control Panel\Mouse" -Name "MouseSpeed" -Value "0" -Type "String"
 
 Write-ScriptMessage "Disabling Windows 11 context menu"
 New-Item -Force -Path "HKCU:Software\Classes\CLSID\{86ca1aa0-34aa-4e8b-a509-50c905bae2a2}\InprocServer32" -ItemType Key
