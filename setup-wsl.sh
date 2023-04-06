@@ -1,17 +1,17 @@
 #!/bin/bash
 
 touch $HOME/.hushlogin
+sudo apt update
 sudo apt upgrade
 sudo apt install neovim
 sudo apt-add-repository ppa:fish-shell/release-3
-sudo apt update
 sudo apt install fish
 chsh -s /usr/bin/fish
 
 Relaunch shell
-# # Copy config of fish
+# Copy config of fish
 curl -sS https://starship.rs/install.sh | sh
-Copy starship config to ~/.config/starship.toml
+# Copy starship config to ~/.config/starship.toml
 
 # Copy ssh keys to ~/.ssh
 chmod 600 $HOME/.ssh/id_rsa $HOME/.ssh/id_rsa.pub
