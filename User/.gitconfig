@@ -6,3 +6,7 @@
 	gpgsign = true
 [push]
 	default = current
+[core]
+    autocrlf = false
+[init]
+    defaultBranch = main
