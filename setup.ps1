@@ -7,7 +7,6 @@ function Write-ScriptMessage {
 }
 
 Write-ScriptMessage "Installing scoop"
-Set-ExecutionPolicy RemoteSigned -Scope CurrentUser
 Invoke-RestMethod get.scoop.sh | Invoke-Expression
 
 Write-ScriptMessage "Installing needed packages"
