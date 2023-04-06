@@ -247,6 +247,8 @@ Remove-PinnedProgram "Microsoft Store"
 # Use WinSetView to remove Downloads folder Grouped by Date modified setting
 # Also restarts explorer.exe
 Write-ScriptMessage "Setting up Explorer"
+Set-RegistryValue -Path "HKCU:Software\Microsoft\Windows\CurrentVersion\Explorer" -Name "ShowFrequent" -Value 0 -Type "DWord"
+Set-RegistryValue -Path "HKCU:Software\Microsoft\Windows\CurrentVersion\Explorer" -Name "ShowCloudFilesInQuickAccess" -Value 0 -Type "DWord"
 PowerShell -ExecutionPolicy Bypass .\WinSetView\WinSetView.ps1 .\AppData\Win10.ini # Path is relative to script location
 
 Write-ScriptMessage "Adding Ultimate Performance power plan"
