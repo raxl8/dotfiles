@@ -140,7 +140,7 @@ Write-ScriptMessage "Disabling Recycle bin on all drives"
 Get-ChildItem "HKCU:Software\Microsoft\Windows\CurrentVersion\Explorer\BitBucket\Volume" |
   Foreach-Object { Set-RegistryValue -Path "HKCU:Software\Microsoft\Windows\CurrentVersion\Explorer\BitBucket\Volume\$(Split-Path $_ -Leaf)" -Name "NukeOnDelete" -Value 1 -Type "DWord" }
 
-Write-ScriptMessage "Removing Taskbar icons"
+Write-ScriptMessage "Removing Taskbar default icons"
 Set-RegistryValue -Path "HKCU:Software\Microsoft\Windows\CurrentVersion\Explorer\Advanced" -Name "ShowTaskViewButton" -Value 0 -Type "DWord"
 Set-RegistryValue -Path "HKCU:Software\Microsoft\Windows\CurrentVersion\Explorer\Advanced" -Name "TaskbarMn" -Value 0 -Type "DWord"
 Set-RegistryValue -Path "HKCU:Software\Microsoft\Windows\CurrentVersion\Search" -Name "SearchboxTaskbarMode" -Value 0 -Type "DWord"
@@ -310,7 +310,8 @@ $code_extensions = @(
   "ms-vscode.hexeditor",
   "ms-vscode-remote.vscode-remote-extensionpack",
   "shardulm94.trailing-spaces",
-  "github.copilot"
+  "github.copilot",
+  "rust-lang.rust-analyzer"
 )
 foreach ($extension in $code_extensions) {
   Write-ScriptMessage "Installing VSCode extension $extension"
