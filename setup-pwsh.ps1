@@ -49,11 +49,11 @@ scoop install firefox
 firefox -P "Scoop"
 
 Write-ScriptMessage "Copying Firefox settings"
-Copy-Item -Force .\Firefox\user.js $env:USERPROFILE\scoop\persist\firefox\profile\
+Copy-Item -Force .\firefox\user.js $env:USERPROFILE\scoop\persist\firefox\profile\
 Write-ScriptMessage "Installing Firefox extensions"
 Add-Type -assembly "System.IO.Compression.FileSystem"
 New-Item -Force -ItemType Directory -Path "$env:USERPROFILE\scoop\persist\firefox\distribution\extensions"
-Push-Location .\Firefox\Extensions
+Push-Location .\firefox\extensions
 $firefox_extensions = @(
   "https://addons.mozilla.org/firefox/downloads/file/4046830/adguard_adblocker-4.1.53.xpi",
   "https://addons.mozilla.org/firefox/downloads/file/4078007/betterttv-7.5.3.xpi",
@@ -258,10 +258,10 @@ $power_scheme_guid = powercfg /duplicatescheme e9a42b02-d5df-448d-aa00-03f14749e
 powercfg /s $power_scheme_guid.Value
 
 Write-ScriptMessage "Setting up user settings"
-Copy-Item -Force -Recurse .\User\.config $env:USERPROFILE
-Copy-Item -Force -Recurse .\User\.ssh $env:USERPROFILE
-Copy-Item -Force .\User\.gitconfig $env:USERPROFILE
-& $env:USERPROFILE\scoop\apps\git\current\usr\bin\gpg --import .\User\key.pk
+Copy-Item -Force -Recurse .\.config $env:USERPROFILE
+Copy-Item -Force -Recurse .\.ssh $env:USERPROFILE
+Copy-Item -Force .\.gitconfig $env:USERPROFILE
+& $env:USERPROFILE\scoop\apps\git\current\usr\bin\gpg --import .\key.pk
 
 Write-ScriptMessage "Setting up Powershell Core"
 Write-ScriptMessage "Copying profile"
@@ -283,7 +283,7 @@ Write-ScriptMessage "Downloading Font"
 scoop bucket add nerd-fonts
 sudo scoop install -g CascadiaCode-NF-Mono
 Write-ScriptMessage "Copying Windows Terminal settings"
-Copy-Item -Force .\Terminal\settings.json $env:LOCALAPPDATA\Packages\Microsoft.WindowsTerminal_8wekyb3d8bbwe\LocalState
+Copy-Item -Force .\windows_terminal\settings.json $env:LOCALAPPDATA\Packages\Microsoft.WindowsTerminal_8wekyb3d8bbwe\LocalState
 Write-ScriptMessage "Setting Windows Terminal as default terminal application"
 Set-RegistryValue -Path "HKCU:Console\%%Startup" -Name "DelegationConsole" -Value "{2EACA947-7F5F-4CFA-BA87-8F7FBEEFBE69}" -Type "String"
 Set-RegistryValue -Path "HKCU:Console\%%Startup" -Name "DelegationTerminal" -Value "{E12CFF52-A866-4C77-9A90-F570A7AA2C6B}" -Type "String"
@@ -293,8 +293,8 @@ scoop install vscode
 reg import "$env:USERPROFILE\scoop\apps\vscode\current\install-associations.reg"
 Write-ScriptMessage "Copying up VSCode settings"
 New-Item -Force -ItemType Directory -Path $env:USERPROFILE\scoop\persist\vscode\data\user-data\User\
-Copy-Item -Force .\Code\settings.json $env:USERPROFILE\scoop\persist\vscode\data\user-data\User\
-Copy-Item -Force .\Code\keybindings.json $env:USERPROFILE\scoop\persist\vscode\data\user-data\User\
+Copy-Item -Force .\vscode\settings.json $env:USERPROFILE\scoop\persist\vscode\data\user-data\User\
+Copy-Item -Force .\vscode\keybindings.json $env:USERPROFILE\scoop\persist\vscode\data\user-data\User\
 
 Write-ScriptMessage "Installing VSCode extensions"
 $code_extensions = @(

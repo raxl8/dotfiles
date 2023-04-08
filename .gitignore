@@ -1,3 +1,3 @@
-/Firefox/Extensions/*.xpi
-/User/.ssh/id_rsa*
-/User/key.pk
+/firefox/extensions/*.xpi
+/.ssh/id_rsa*
+/key.pk
