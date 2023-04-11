@@ -1,3 +1,4 @@
 /firefox/extensions/*.xpi
 /.ssh/id_rsa*
 /key.pk
+packer_compiled.lua
