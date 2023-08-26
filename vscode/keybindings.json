@@ -1,77 +1,7 @@
 [
     {
-        "key": "ctrl+down",
-        "command": "spaceBlockJumper.moveDown",
-        "when": "editorTextFocus"
-    },
-    {
-        "key": "ctrl+up",
-        "command": "spaceBlockJumper.moveUp",
-        "when": "editorTextFocus"
-    },
-    {
-        "key": "ctrl+shift+down",
-        "command": "spaceBlockJumper.selectDown",
-        "when": "editorTextFocus"
-    },
-    {
-        "key": "ctrl+shift+up",
-        "command": "spaceBlockJumper.selectUp",
-        "when": "editorTextFocus"
-    },
-    {
-        "key": "alt+left",
-        "command": "cursorLineStart",
-        "when": "editorTextFocus"
-    },
-    {
-        "key": "alt+right",
-        "command": "cursorLineEnd",
-        "when": "editorTextFocus"
-    },
-    {
-        "key": "end",
-        "command": "-cursorEnd",
-        "when": "textInputFocus"
-    },
-    {
         "key": "ctrl+m",
         "command": "-editor.action.toggleTabFocusMode"
-    },
-    {
-        "key": "escape",
-        "command": "workbench.action.navigateBack",
-        "when": "editorTextFocus && canNavigateBack"
-    },
-    {
-        "key": "alt+left",
-        "command": "-workbench.action.navigateBack",
-        "when": "canNavigateBack"
-    },
-    {
-        "key": "alt+right",
-        "command": "-workbench.action.navigateForward",
-        "when": "canNavigateForward"
-    },
-    {
-        "key": "shift+alt+right",
-        "command": "-editor.action.smartSelect.expand",
-        "when": "editorTextFocus"
-    },
-    {
-        "key": "shift+alt+left",
-        "command": "-editor.action.smartSelect.shrink",
-        "when": "editorTextFocus"
-    },
-    {
-        "key": "shift+alt+right",
-        "command": "cursorLineEndSelect",
-        "when": "editorTextFocus"
-    },
-    {
-        "key": "shift+alt+left",
-        "command": "cursorLineStartSelect",
-        "when": "editorTextFocus"
     },
     {
         "key": "ctrl+enter",

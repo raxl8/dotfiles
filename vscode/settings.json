@@ -21,8 +21,6 @@
             "icon": "terminal-powershell"
         }
     },
-    "workbench.colorTheme": "Monokai Pro (Filter Machine)",
-    "workbench.iconTheme": "Monokai Pro (Filter Machine) Icons",
     "workbench.startupEditor": "none",
     "git.autofetch": true,
     "git.confirmSync": false,
