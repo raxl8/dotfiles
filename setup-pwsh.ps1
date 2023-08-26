@@ -302,20 +302,16 @@ Copy-Item -Force .\vscode\keybindings.json $env:USERPROFILE\scoop\persist\vscode
 
 Write-ScriptMessage "Installing VSCode extensions"
 $code_extensions = @(
-  "dbaeumer.vscode-eslint",
-  "eliverlara.andromeda",
-  "esbenp.prettier-vscode",
   "jeff-hykin.better-cpp-syntax",
-  "jmfirth.vsc-space-block-jumper",
-  "leonardssh.vscord",
-  "monokai.theme-monokai-pro-vscode",
-  "ms-python.python",
   "ms-vscode.cpptools-extension-pack",
-  "ms-vscode.hexeditor",
-  "ms-vscode-remote.vscode-remote-extensionpack",
-  "shardulm94.trailing-spaces",
+  "leonardssh.vscord",
+  "dbaeumer.vscode-eslint",
   "github.copilot",
-  "rust-lang.rust-analyzer"
+  "esbenp.prettier-vscode",
+  "ms-python.python",
+  "ms-vscode-remote.vscode-remote-extensionpack",
+  "rust-lang.rust-analyzer",
+  "shardulm94.trailing-spaces"
 )
 foreach ($extension in $code_extensions) {
   Write-ScriptMessage "Installing VSCode extension $extension"
