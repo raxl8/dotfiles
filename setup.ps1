@@ -16,4 +16,4 @@ scoop install git
 scoop install pwsh
 scoop install sudo
 
-Start-Process pwsh -Verb runAs -Args "-ExecutionPolicy Bypass .\setup-pwsh.ps1"
+Start-Process pwsh -Verb runAs -Args "-ExecutionPolicy Bypass .\setup-pwsh.ps1 $args"
