@@ -321,8 +321,6 @@ foreach ($extension in $code_extensions) {
 Write-ScriptMessage "Installing remaining apps"
 scoop install spotify
 scoop install everything-lite
-scoop bucket add versions
-scoop install steam
 
 Write-ScriptMessage "Removing desktop shortcuts"
 Get-ChildItem $env:USERPROFILE\Desktop\*.lnk | ForEach-Object {
