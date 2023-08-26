@@ -329,8 +329,8 @@ Get-ChildItem $env:USERPROFILE\Desktop\*.lnk | ForEach-Object {
 }
 
 if ($wsl) {
-Write-ScriptMessage "Installing WSL"
-wsl.exe --install
+  Write-ScriptMessage "Installing WSL"
+  wsl.exe --install
 }
 
 Write-ScriptMessage "You can now reboot, press any key to continue"
