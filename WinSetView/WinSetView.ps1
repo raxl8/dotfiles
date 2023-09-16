@@ -155,7 +155,7 @@ Function RestartExplorer {
   & $RegExe Import $DeskBak
   Stop-Process -Force -ErrorAction SilentlyContinue -ProcessName Explorer
   If ($ResetThumbs -eq 1) {ResetThumbCache}
-  Explorer $PSScriptRoot
+  Explorer # $PSScriptRoot
   Exit
 }
 
